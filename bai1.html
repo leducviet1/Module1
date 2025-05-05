@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành kết thúc module 1</title>
+</head>
+<body>
+<script>
+  function tinhToan(arr){
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < arr.length; i+=2) {
+      if( arr[i] % 2 != 0){
+          sum += arr[i];
+          count++;
+      }
+    }
+    if(count>0){
+      return sum/count;
+    }else{
+      return null;
+    }
+  }
+  let num = +prompt("Nhập số phần tử của mảng (0-50)");
+  if(num<0||num>50){
+    alert("Bạn nhập không hợp lệ");
+  }else{
+    let arr=[];
+    for(let i = 0; i < num; i++){
+      let value = +prompt(`Nhập phần tử thứ ${i+1}`);
+      arr.push(value);
+    }
+    document.write("Mảng đã nhập:" + arr.join(", ") +"<br/>");
+    let result = tinhToan(arr);
+    if (result !== null) {
+      document.write("Trung bình cộng các số lẻ ở vị trí chẵn: " + result);
+    } else {
+      alert("Không có số lẻ nào ở vị trí chẵn.");
+    }
+  }
+</script>
+</body>
+</html>
