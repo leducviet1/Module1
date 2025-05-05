@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+    <link rel="stylesheet" href="bai3.css">
+</head>
+<body>
+<h2>
+    Quản lí sách
+</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Mã số sách</th>
+        <th>Tên sách</th>
+        <th>Năm xuất bản</th>
+        <th>Số quyển</th>
+        <th>Tình trạng</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+<div class="chucnang">
+    <button onclick="hienForm();" id="buttonAdd">Thêm sách mới</button>
+    <div id="formAdd" style="display: none">
+        <form action="" id="addBook" onsubmit="addBook(event)">
+            <label for="id"> Mã số sách </label>
+            <input type="text" name="id" id="id" required> <br> <br>
+            <label for="name">Tên sách </label>
+            <input type="text" name="name" id="name" required> <br> <br>
+            <label for="year">Năm xuất bản</label>
+            <input type="number" name="year" id="year" required> <br> <br>
+            <label for="many">Số quyển</label>
+            <input type="number" name="many" id="many" required> <br>
+            <button type="submit">Thêm sách mới</button>
+        </form>
+    </div>
+
+    <div class="muonSach ">
+        <form action="" id="borrowBook" onsubmit="borrowBook(event)">
+            <button type="submit">Mượn sách</button>
+        </form>
+    </div>
+
+    <div>
+        <form action="" id="addMany">
+            <button type="submit">Thêm sách đã có</button>
+        </form>
+    </div>
+</div>
+
+<script src="bai3.js"></script>
+</body>
+</html>

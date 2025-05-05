@@ -5,6 +5,33 @@
     <title>Bài 2</title>
 </head>
 <body>
+<script>
+    function tongUocSo(n) {
+        let sum = 0;
+        for (let i = 0; i <= n / 2; i++) {
+            if (n % i == 0) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
 
+    function capSoThanThiet(a, b) {
+        if (a <= 0 || b <= 0) {
+            return false;
+        } else {
+            return tongUocSo(a) === b && tongUocSo(b) === a;
+        }
+    }
+
+    let a = +prompt("Nhập số a:");
+    let b = +prompt("Nhập số b:");
+    if (capSoThanThiet(a, b)) {
+        document.write(`${a} và ${b} là cặp số thân thiết.`);
+    } else {
+        document.write(`${a} và ${b} không phải là cặp số thân thiết.`);
+    }
+
+</script>
 </body>
 </html>

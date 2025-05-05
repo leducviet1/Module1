@@ -1,0 +1,45 @@
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.chucnang{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button#buttonAdd {
+    background-color: #4CAF50; /* Màu nền xanh lá */
+    color: white; /* Màu chữ trắng */
+}
+
+button#buttonAdd:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+}
+.muonSach{
+    margin-left: 20px;
+}
+#addMany{
+    margin-left: 20px;
+    background-color: #4CAF50;
+}
